@@ -1,3 +1,5 @@
+# Preparing the dev environment (Class 1)
+
 Welcome to the first class of the course!
 
 To get started, we need to set up a virtual environment for our Python project. This will allow us to isolate our project from other Python libraries installed on our system.

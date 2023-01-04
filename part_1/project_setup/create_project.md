@@ -1,6 +1,4 @@
----
-title: "Create Django project (Class 2)"
----
+# Creating the project (Class 2)
 
 Once we have our environment properly set up, we can create our project. Django provides a command to do this. Let's run it:
 
@@ -20,17 +18,24 @@ Let's check our new project folder to understand what we have done.
         ├── asgi.py
 
 **manage.py**
-The manage.py file is a command-line utility that allows you to interact with your Django project. It is typically used to manage things like starting the development server, creating and applying migrations, and running management commands.
+The manage.py file is a command-line utility that allows you to interact with your Django project. It also provides a number of subcommands that you can use to manage things like starting the development server, creating and applying migrations, and running management commands.
 
-The manage.py file is typically found at the root of a Django project, and it is used to set up the appropriate environment for the Django project to run. It also provides a number of subcommands that you can use to interact with your project.
+For example, 
 
-For example, you can use the manage.py file to start the development server by running the following command:
-
-```bash
+Django comes with a built-in development server that you can use to test your application. To start the development server run the following command:
+  
+  ```bash
 python manage.py runserver
+
+Performing system checks...
+System check identified no issues (0 silenced).
+August 31, 2022 - 20:34:29
+Django version 4.0.6, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
 ```
 
-This will start the development server on your local machine, allowing you to access your Django project in a web browser.
+You can check the server running if you open your browser in http://127.0.0.1:8000/
 
 Other common manage.py subcommands include migrate, which is used to apply database migrations, and createsuperuser, which is used to create a new user with administrative privileges.
 
@@ -96,18 +101,18 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
-Django comes with a built-in development server that you can use to test your application.
-Let's start it.
-  
-  ```bash
-python manage.py runserver
+**wsgi.py**
+WSGI (Web Server Gateway Interface) is a specification that defines how a web server communicates with web applications, and how web applications can be chained together to process one request.
 
-Performing system checks...
-System check identified no issues (0 silenced).
-August 31, 2022 - 20:34:29
-Django version 4.0.6, using settings 'mysite.settings'
-Starting development server at http://127.0.0.1:8000/
-Quit the server with CONTROL-C.
-```
+The WSGI specification defines a standard interface between web servers and web applications, which allows for a pluggable architecture. This means that you can use any WSGI-compatible web server to host your Django application, and you can use any WSGI-compatible application framework to develop your application.
 
-You can check the server running if you open your browser in http://127.0.0.1:8000/
+In Django, the file wsgi.py is an entry point for WSGI-compatible web servers to serve your Django project. It contains a single WSGI application object that the web server uses to communicate with your Django project. When a request is made to your Django project, the web server will forward it to the WSGI application, which will then handle the request and return the appropriate response. 
+
+The wsgi.py file is an important part of Django's deployment options and is commonly used in production environments. It allows you to use any WSGI-compatible web server to host your Django project, and it provides a standard way for Django to interface with these web servers.
+
+ASGI (Asynchronous Server Gateway Interface) is a specification for building asynchronous web applications. It is similar to WSGI, but is designed to support asyncio and async/await syntax.
+
+In Django, the file asgi.py is an entry point for ASGI-compatible web servers to serve your Django project asynchronously. 
+
+
+In the next chapter we will create our first app.

@@ -1,10 +1,7 @@
----
-title: "Create Django app (Class 3)"
----
-Let's say we want our system to remember all our friends birthdays.
+# Creating our first app (Class 3)
 
-Django also introduces a concept called apps. Apps in django are like submodules.
-We will have apps like friends and birthdays for example. Or in a blog system
+Django introduces a concept called apps. Apps in django are like submodules.
+We will have apps like friends and birthdays in a calendar system. Or in a blog system
 we will have apps like blog and posts. Let's create our first app 'birthdays':
 
     $ python manage.py startapp birthdays
@@ -24,12 +21,13 @@ Let's dive deep into the files created.
 ###models.py
 django uses a pattern called MVT - The M is for models.
 The models in django are the equivalent of tables in a relational database.
-We can see that the models.py file that django created it is empty. So let's write
-our model.
+We can see that the models.py file that django created is empty. So let's write
+our first model.
     
 
 ```python
 from django.db import models
+
 
 class Birthday(models.Model):
     friend = models.CharField(max_length=50)
@@ -98,4 +96,4 @@ datetime.date(2000, 1, 1)
 ```
 
 And that's it for today, we have a fully functional model that we can use to store our birthdays.
-
+We will check the rest of the files created in the next chapter.

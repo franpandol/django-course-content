@@ -1,7 +1,7 @@
 ---
 title: "Django Admin (Class 4)"
 ---
-One nice feature of Django is its ability to create a CRUD interface for your application automatically from the models. The models are the represaentation of the data in the database. Django provides a default admin interface that you can use to manage your application's data. You can also customize the admin interface to suit your needs.
+One nice feature of Django is its ability to create a CRUD interface for your application automatically from the models. The models are the representation of the data in the database. Django provides a default admin interface that you can use to manage your application's data. You can also customize the admin interface to suit your needs.
 
 To use the Django admin feature, you first need to create a superuser account by running the following command:
 

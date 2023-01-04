@@ -1,6 +1,4 @@
----
-title: "URLs (Class 5)"
----
+# URLs (Class 5)
 
 In Django, a URL is the path to a view. 
 
@@ -28,7 +26,7 @@ urlpatterns = [
 The first argument in the path function is the URL pattern. The second argument is the view that will be called when a user requests the URL. The third argument is the name of the URL pattern. This name is used to refer to the URL in other parts of the project.
 In this example we use two different types of URL patterns. The first one is a slug, and the second one is an integer. The slug is a string that contains only letters, numbers, underscores or hyphens. The integer is a number. The slug is used to identify a post by its title, and the integer is used to identify a post by its id.
 
-Including other URLconfs
+### Including other URLconfs
 
 ```python
 # urls.py
